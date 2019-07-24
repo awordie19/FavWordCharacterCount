@@ -14,7 +14,7 @@ def characterCount():
         return "You didn't fill it out. PERIOD. "
     else:
         favoriteWordData = dict(request.form)
-        favoriteWord = favoriteWordData["favoriteWord"][0]
+        favoriteWord = favoriteWordData["favoriteWord"]
         # endthis = model.characterCount(favoriteWord)
         return render_template("favoriteWord.html", endthis = model.characterCount(favoriteWord))
 
